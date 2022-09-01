@@ -1,0 +1,63 @@
+h4 {
+    padding: 14px 0px;
+    margin: 0;
+}
+
+.section-title {
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: orange;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: orange;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: orange;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    padding: 0px 15px;
+    margin-left: 38%;
+    margin-right: 38%;
+    background-color: #000;
+}
+
+img {
+    max-width: 300px;
+}
+
+article {
+    color: orange;
+    background: black;
+    margin: 100px;
+    display: inline-block;
+    border: 2px solid orange;
+    border-radius: 6px;
+    padding-bottom: 25px;
+}
+
+#itemName {
+    margin-top: 20px;
+    color: white;
+}
+
+#itemReleaseDate {
+    margin-bottom: 20px;
+}
+
+.detailsButton {
+    align-content: center;
+    margin: 20px;
+    color: black;
+    padding: 4px 18px;
+    font-size: large;
+    border-radius: 4px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.detailsButton:hover {
+    color: orange;
+    background: black;
+    border: 1px solid orange;
+}
