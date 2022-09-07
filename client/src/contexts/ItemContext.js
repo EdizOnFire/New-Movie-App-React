@@ -1,6 +1,6 @@
 import { createContext, useReducer, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ADD_COMMENT, ADD_ITEM, ADD_ITEMS, FETCH_ITEM_DETAILS, DELETE_ITEM } from "../constants";
+import { ADD_COMMENT, ADD_ITEM, ADD_ITEMS, EDIT_ITEM, FETCH_ITEM_DETAILS, DELETE_ITEM } from "../constants";
 
 import * as itemService from "../services/itemService";
 
@@ -13,6 +13,7 @@ const itemReducer = (state, action) => {
     case ADD_ITEM:
       return [...state, action.payload];
     case FETCH_ITEM_DETAILS:
+    case EDIT_ITEM:
       return state.map((x) => (x._id === action.itemId ? action.payload : x));
     case ADD_COMMENT:
       return state.map(
@@ -73,6 +74,14 @@ export const ItemProvider = ({ children }) => {
     navigate("/catalog");
   };
 
+  const itemEdit = (itemId, itemData) => {
+    send({
+      type: "EDIT_ITEM",
+      payload: itemData,
+      itemId,
+    });
+  };
+
   const itemRemove = (itemId) => {
     send({
       type: "DELETE_ITEM",
@@ -88,6 +97,7 @@ export const ItemProvider = ({ children }) => {
         addComment,
         fetchItemDetails,
         selectItem,
+        itemEdit,
         itemRemove,
       }}
     >

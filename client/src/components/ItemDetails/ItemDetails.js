@@ -29,7 +29,7 @@ const ItemDetails = () => {
 
     return (
         <section id="detailsPage">
-            <br/>
+            <br />
             <div className="movieInfo">
                 <div className="movieCover">
                     <img src={currentItem.imgUrl} alt="Apologies for the error." />
@@ -42,13 +42,14 @@ const ItemDetails = () => {
             </div>
             {isOwner && (
                 <div className="actionBtn">
+                    <Link to={`/catalog/${itemId}/edit`} className="detailsButton">Edit</Link>
                     <Link to='' onClick={itemDeleteHandler} className="detailsButton">Delete</Link>
                 </div>
             )}
             <section>
                 <ItemComments />
             </section>
-            <br/>
+            <br />
         </section>
     );
 };

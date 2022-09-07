@@ -28,3 +28,13 @@ export const ItemOwner = ({ children }) => {
 
   return children ? children : <Outlet />;
 };
+
+// export const ItemOwner = () => {
+//   const { selectItem } = useContext(ItemContext);
+//   const { user, isAuthenticated } = useContext(AuthContext);
+//   const { itemId } = useParams();
+
+//   const currentItem = selectItem(itemId);
+
+//   return (isAuthenticated && user._id !== currentItem._ownerId) ? <Outlet /> : <Navigate to="/catalog" replace />;
+// };
