@@ -27,7 +27,6 @@ const CreateItem = () => {
           required="required"
           id="name"
           name="name"
-          className="name"
           type="text"
           placeholder="Movie name"
         />
@@ -36,7 +35,6 @@ const CreateItem = () => {
           required="required"
           id="imgUrl"
           name="imgUrl"
-          className="imgUrl"
           type="text"
           placeholder="Image Url"
         />
@@ -45,7 +43,6 @@ const CreateItem = () => {
           required="required"
           id="releaseDate"
           name="releaseDate"
-          className="releaseDate"
           type="text"
           placeholder="Release date"
         />
@@ -54,7 +51,6 @@ const CreateItem = () => {
           required="required"
           id="writer"
           name="writer"
-          className="writer"
           type="text"
           placeholder="Writer"
         />
@@ -63,7 +59,6 @@ const CreateItem = () => {
           required="required"
           id="genre"
           name="genre"
-          className="genre"
           type="text"
           placeholder="Genre"
         />
@@ -72,7 +67,6 @@ const CreateItem = () => {
           required="required"
           name="description"
           type="text"
-          className="description"
           placeholder="Description"
         />
         <div>
