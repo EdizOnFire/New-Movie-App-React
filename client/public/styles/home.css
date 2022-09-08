@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: orange;
+  color: #fdc818;
   text-decoration: none;
 }
 
@@ -24,7 +24,7 @@ footer {
   color:black;
   text-align: left;
   padding: 20px;
-  background-color: orange;
+  background-color: #fdc818;
 }
 
 nav {
@@ -37,7 +37,7 @@ nav ul {
   text-align: left;
   margin: 0;
   padding: 10px 0;
-  background-color: orange;
+  background-color: #fdc818;
 }
 
 nav ul li {
@@ -61,7 +61,7 @@ nav ul li a:hover {
   padding: 20px 0;
   font-size: 50px;
   text-align: center;
-  color: orange;
+  color: #fdc818;
 }
 
 #welcomePage h1 {
@@ -69,12 +69,12 @@ nav ul li a:hover {
   font-style: italic;
   font-size: 100px;
   text-align: center;
-  color: orange;
+  color: #fdc818;
   text-shadow: 4px 4px 2px #ce5937;
 }
 
 #welcomePage p {
-  color: orange;
+  color: #fdc818;
   margin: 50px;
 }
 

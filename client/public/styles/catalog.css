@@ -6,16 +6,16 @@ h4 {
 .section-title {
     border-left-width: 10px;
     border-left-style: solid;
-    border-left-color: orange;
+    border-left-color: #fdc818;
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: orange;
+    border-right-color: #fdc818;
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: orange;
+    border-top-color: #fdc818;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: orange;
+    border-bottom-color: #fdc818;
     padding: 0px 15px;
     margin-left: 38%;
     margin-right: 38%;
@@ -27,11 +27,11 @@ img {
 }
 
 article {
-    color: orange;
+    color: #fdc818;
     background: black;
     margin: 100px;
     display: inline-block;
-    border: 2px solid orange;
+    border: 2px solid #fdc818;
     border-radius: 6px;
     padding-bottom: 25px;
 }
@@ -52,12 +52,12 @@ article {
     padding: 4px 18px;
     font-size: large;
     border-radius: 4px;
-    background-color: orange;
+    background-color: #fdc818;
     cursor: pointer;
 }
 
 .detailsButton:hover {
-    color: orange;
+    color: #fdc818;
     background: black;
-    border: 1px solid orange;
+    border: 1px solid #fdc818;
 }

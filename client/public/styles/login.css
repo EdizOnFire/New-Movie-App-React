@@ -8,15 +8,15 @@ span {
 
 button[type="submit"]:hover {
     background-color: #000;
-    color: orange;
-    border: 1px solid orange;
+    color: #fdc818;
+    border: 1px solid #fdc818;
 }
 
 form {
     font-size: 100%;
     margin-left: 38%;
     margin-right: 38%;
-    border: 1px solid orange;
+    border: 1px solid #fdc818;
     background-color: black;
 }
 
@@ -35,7 +35,7 @@ button[type="submit"] {
     text-decoration: none;
     border-radius: 4px;
     border: 1px solid rgb(0, 0, 0);
-    background-color: orange;
+    background-color: #fdc818;
     margin: 5%;
 }
 
