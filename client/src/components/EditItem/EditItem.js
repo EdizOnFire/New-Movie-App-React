@@ -10,20 +10,27 @@ const EditItem = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    itemService.getOne(itemId).then((itemData) => {
-      setCurrentItem(itemData);
-    });
+    try {
+      itemService.getOne(itemId).then((itemData) => {
+        setCurrentItem(itemData);
+      });
+    } catch (error) {
+      alert(error);
+    }
   }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const itemData = Object.fromEntries(new FormData(e.target));
-
-    itemService.edit(itemId, itemData).then((result) => {
-      itemEdit(itemId, result);
-      navigate(`/catalog/${itemId}`);
-    });
+    try {
+      itemService.edit(itemId, itemData).then((result) => {
+        itemEdit(itemId, result);
+        navigate(`/catalog/${itemId}`);
+      });
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (

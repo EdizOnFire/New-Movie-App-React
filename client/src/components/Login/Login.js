@@ -11,21 +11,22 @@ const Login = () => {
         e.preventDefault();
 
         const { email, password } = Object.fromEntries(new FormData(e.target));
-
-        authService
-            .login(email, password)
-            .then((authData) => {
-                if (authData.code !== 403) {
-                    userLogin(authData);
-                    navigate("/");
-                } else {
-                    alert("Email and password don't match.");
-                    return;
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        
+        try {
+            authService
+                .login(email, password)
+                .then((authData) => {
+                    if (authData.code !== 403) {
+                        userLogin(authData);
+                        navigate("/");
+                    } else {
+                        alert("Email and password don't match.");
+                        return;
+                    }
+                })
+        } catch (error) {
+            alert(error);
+        }
     };
 
     return (

@@ -17,21 +17,27 @@ const ItemComments = () => {
         (async () => {
             const itemDetails = await itemService.getOne(itemId);
             const itemComments = await commentService.getByItemId(itemId);
-
-            fetchItemDetails(itemId, {
-                ...itemDetails,
-                comments: itemComments.map((x) => `${x.user.email}: ${x.text}`),
-            });
+            try {
+                fetchItemDetails(itemId, {
+                    ...itemDetails,
+                    comments: itemComments.map((x) => `${x.user.email}: ${x.text}`),
+                });
+            } catch (error) {
+                alert(error);
+            }
         })();
-    }, []);
+    }, [comment]);
 
     const addCommentHandler = (e) => {
         e.preventDefault();
-
-        commentService.create(itemId, comment).then(() => {
-            addComment(itemId, comment);
-            setComment("");
-        });
+        try {
+            commentService.create(itemId, comment).then(() => {
+                addComment(itemId, comment);
+                setComment("");
+            });
+        } catch (error) {
+            alert(error);
+        }
     };
 
     if (currentItem.comments === undefined) {

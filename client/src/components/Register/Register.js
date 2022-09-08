@@ -20,11 +20,14 @@ const Register = () => {
             alert("Passwords don't match.");
             return;
         }
-
-        authService.register(email, password).then((authData) => {
-            userLogin(authData);
-            navigate("/");
-        });
+        try {
+            authService.register(email, password).then((authData) => {
+                userLogin(authData);
+                navigate("/");
+            });
+        } catch (error) {
+            alert(error);
+        }
     };
 
     return (

@@ -20,10 +20,14 @@ const ItemDetails = () => {
         );
 
         if (confirmation) {
-            itemService.remove(itemId).then(() => {
-                itemRemove(itemId);
-                navigate("/catalog");
-            });
+            try {
+                itemService.remove(itemId).then(() => {
+                    itemRemove(itemId);
+                    navigate("/catalog");
+                });
+            } catch (error) {
+                alert(error);
+            }
         }
     };
 

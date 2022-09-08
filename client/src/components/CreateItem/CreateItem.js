@@ -9,10 +9,13 @@ const CreateItem = () => {
     e.preventDefault();
 
     const itemData = Object.fromEntries(new FormData(e.target));
-
-    itemService.create(itemData).then((result) => {
-      itemAdd(result);
-    });
+    try {
+      itemService.create(itemData).then((result) => {
+        itemAdd(result);
+      });
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (

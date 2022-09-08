@@ -9,47 +9,50 @@ const Header = () => {
 
     const onLogout = (e) => {
         e.preventDefault();
-
-        authService
-            .logout(user.accessToken)
-            .then(() => {
-                navigate("/");
-                userLogout();
-            })
-            .catch(() => {
-                navigate("/");
-            });
+        try {
+            authService
+                .logout(user.accessToken)
+                .then(() => {
+                    navigate("/");
+                    userLogout();
+                })
+                .catch(() => {
+                    navigate("/");
+                });
+        } catch (error) {
+            alert(error);
+        }
     };
 
     return (
         <header>
             <nav>
                 <ul>
-                    <li><Link to="/" className="nav-item nav-link active">
+                    <li><Link to="/">
                         Home
                     </Link></li>
-                    <li><Link to="/catalog" className="nav-item nav-link">
+                    <li><Link to="/catalog">
                         Catalog
                     </Link></li>
                     {user.email && (
-                        <li><Link to="/create" className="nav-item nav-link">
+                        <li><Link to="/create">
                             Create Movie
                         </Link>
                         </li>
                     )}
                     {user.email && (
-                        <li><Link to="" className="nav-item nav-link" onClick={onLogout}>
+                        <li><Link to="" onClick={onLogout}>
                             Logout
                         </Link>
                         </li>
                     )}
                     {!user.email && (
-                        <li><Link to="/login" className="nav-item nav-link">
+                        <li><Link to="/login">
                             Login
                         </Link></li>
                     )}
                     {!user.email && (
-                        <li><Link to="/register" className="nav-item nav-link">
+                        <li><Link to="/register">
                             Register
                         </Link></li>
                     )}
