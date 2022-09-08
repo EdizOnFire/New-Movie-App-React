@@ -21,7 +21,7 @@ function App() {
             <div id="box">
                 <Header />
                 <ItemProvider>
-                    <main id="main-content">
+                    <main>
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/catalog" element={<Catalog />} />
